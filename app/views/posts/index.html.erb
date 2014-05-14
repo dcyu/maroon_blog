@@ -5,6 +5,7 @@
     <tr>
       <th>Title</th>
       <th>Body</th>
+      <th>Category</th>
       <th>Date</th>
       <th></th>
       <th></th>
@@ -17,6 +18,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
+        <td><%= post.category.name %></td>
         <td><%= post.date %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
@@ -29,3 +31,6 @@
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+
+<%= link_to 'See all categories', categories_path %>
+
