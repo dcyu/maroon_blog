@@ -10,6 +10,15 @@
 
 <header>
   <h1>Maroon Blog</h1>
+  <% if flash[:notice] %>
+    <p>
+      <%= flash[:notice] %>
+    </p>
+  <% end %>
+  
+  <% if session[:user_id] %>
+    <%= link_to "Sign out", sign_out_path %>
+  <% end %>
 </header>
 
 <%= yield %>
